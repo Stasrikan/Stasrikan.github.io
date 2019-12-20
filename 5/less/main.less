@@ -24,13 +24,15 @@ body {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+.flex-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .container {
   max-width: 1200px;
   padding: 0 1.5rem;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   a {
     text-decoration: none;
     color: #3f4244;
@@ -47,10 +49,13 @@ body {
     padding-bottom: 0.5rem;
     border-bottom: 0.2rem solid lime;
   }
-  img {
+  .logo {
     width: 10rem;
     height: 2.5rem;
   }
+}
+.section {
+  padding-bottom: 8rem;
 }
 @media (max-width: 1200px) {
   .container {
@@ -74,7 +79,7 @@ body {
 }
 .main {
   background-image: linear-gradient(to bottom, #6dffc6 1%, #3fd2ce 99%);
-  padding: 22rem 1.5rem 25rem 1.5rem;
+  padding: 22rem 1.5rem 17rem 1.5rem;
   h1 {
     color: #ffffff;
     font-size: 6rem;
@@ -82,23 +87,23 @@ body {
     text-align: center;
     margin-bottom: 5rem;
   }
-  button {
-    color: #ffffff;
-    display: block;
-    margin: 0 auto;
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: 2.5rem 6rem;
-    border: 0.1rem solid #ff4856;
-    background-image: linear-gradient(to bottom, #ff6c54 1%, #ff2b59 99%);
-    border-radius: 1rem;
-  }
-  button:hover {
-    background: #ff4856;
-    border-color: #ff4856;
-    cursor: pointer;
-  }
+}
+.btn {
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 2.5rem 6rem;
+  border: 0.1rem solid #ff4856;
+  background-image: linear-gradient(to bottom, #ff6c54 1%, #ff2b59 99%);
+  border-radius: 1rem;
+}
+.btn:hover {
+  background: #ff4856;
+  border-color: #ff4856;
+  cursor: pointer;
 }
 .services {
   display: flex;
@@ -106,6 +111,7 @@ body {
   margin: 0 auto;
   align-items: center;
   padding-top: 8.5rem;
+  margin-bottom: 10rem;
 }
 .service {
   max-width: 23.4rem;
@@ -134,4 +140,62 @@ body {
 }
 .service:last-child {
   margin: 0;
+}
+.design {
+  background-image: linear-gradient(-187.81deg, #ff6c54 1%, #ff2b59 99%);
+  padding-top: 9rem;
+  img {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 14.5rem;
+    margin-bottom: -2rem;
+  }
+}
+.h2-light {
+  color: #ffffff;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 400;
+}
+.light-text {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.responsive {
+  background-color: white;
+  display: flex;
+}
+.phone-img {
+  width: 30%;
+  object-fit: contain;
+  margin-top: 6.8rem;
+  margin-left: 15rem;
+}
+.h2-dark {
+  color: #3f4244;
+  font-size: 4rem;
+  font-weight: 400;
+}
+.responsive__text {
+  margin-top: 12rem;
+  margin-left: 12rem;
+  p {
+    color: #929ba0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 75%;
+    margin-top: 5rem;
+  }
+  button {
+    display: inline-block;
+    text-align: left;
+    margin-top: 6rem;
+  }
 }
