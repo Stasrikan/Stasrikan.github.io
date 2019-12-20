@@ -1,7 +1,12 @@
 html {
   font-size: 10px;
 }
-@media (max-width: 767px) {
+@media (max-width: 400px) {
+  html {
+    font-size: 4px;
+  }
+}
+@media (max-width: 767px) and (min-width: 400px) {
   html {
     font-size: 5px;
   }
@@ -19,6 +24,7 @@ html {
 body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 .header {
   background-color: white;
@@ -27,7 +33,7 @@ body {
 }
 .container {
   max-width: 1200px;
-  padding: 0 15px;
+  padding: 0 1.5rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -65,13 +71,17 @@ body {
 }
 @media (max-width: 767px) {
   .container {
+    max-width: 525px;
+  }
+}
+@media (max-width: 400px) {
+  .container {
     max-width: none;
   }
 }
 .main {
-  background-color: #5defc9;
-  padding-top: 22rem;
-  padding-bottom: 25rem;
+  background-image: linear-gradient(to bottom, #6dffc6 1%, #3fd2ce 99%);
+  padding: 22rem 1.5rem 25rem 1.5rem;
 }
 .main h1 {
   color: #ffffff;
@@ -89,6 +99,46 @@ body {
   text-transform: uppercase;
   padding: 2.5rem 6rem;
   border: 0.1rem solid #ff4856;
-  background-color: #ff4856;
+  background-image: linear-gradient(to bottom, #ff6c54 1%, #ff2b59 99%);
   border-radius: 1rem;
+}
+.main button:hover {
+  background: #ff4856;
+  border-color: #ff4856;
+  cursor: pointer;
+}
+.services {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  padding-top: 8.5rem;
+}
+.service {
+  max-width: 23.4rem;
+  height: 26rem;
+  margin-right: 5rem;
+}
+.service img {
+  width: 13rem;
+  height: 13rem;
+  display: block;
+  margin: 0 auto;
+}
+.service h3 {
+  color: #3f4244;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+.service p {
+  color: #929ba0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+}
+.service:last-child {
+  margin: 0;
 }
