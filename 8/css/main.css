@@ -1,0 +1,217 @@
+html {
+  font-size: 9px;
+  width: 100%;
+  height: auto;
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 2100px;
+  padding: 0px 6.3rem;
+  margin: 0 auto;
+}
+.header {
+  background-color: #fff;
+  padding: 4.9rem 0 5.5rem 0;
+}
+.navigation {
+  background-color: #8b8e8f;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.nav a {
+  padding: 3rem 2rem 3rem 2rem;
+  transition: all 0.2s ease;
+}
+.nav a:hover {
+  color: #000;
+  background-color: #7e9198;
+}
+.main {
+  background-color: #babdbf;
+  padding-top: 45.8rem;
+  padding-bottom: 12rem;
+  text-align: right;
+}
+.main h2 {
+  color: #fff;
+  font-family: "Baskerville", sans-serif;
+  font-size: 7.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  margin-bottom: 4rem;
+}
+.main h3 {
+  font-family: "Athelas", sans-serif;
+  font-size: 4.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+}
+.team {
+  background-color: #fff;
+  padding-top: 30rem;
+  text-align: center;
+  padding-bottom: 35rem;
+}
+.team h2 {
+  font-family: "Athelas", sans-serif;
+  font-size: 6.1rem;
+  color: #a95e39;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+}
+.team h2::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 44.2rem;
+  height: 0.3rem;
+  background-color: #88543a;
+  margin-top: 4rem;
+  margin-bottom: 8.7rem;
+}
+.team p {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 3.1rem;
+  font-weight: 400;
+  letter-spacing: 0.09rem;
+}
+.human {
+  text-align: center;
+  margin: 13rem 9rem 0 9rem;
+}
+.human h4 {
+  color: #000;
+  font-family: "Helvetica", sans-serif;
+  font-size: 3.1rem;
+  font-weight: 400;
+  letter-spacing: 0.09rem;
+}
+.human p {
+  color: #000;
+  display: block;
+  font-family: "Helvetica", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.546rem;
+  letter-spacing: 0.06rem;
+}
+.human p:hover {
+  cursor: pointer;
+}
+.human img {
+  margin: 0 auto;
+  width: 44rem;
+  height: 57rem;
+}
+.slick-active {
+  outline: none;
+}
+h1,
+h2,
+h3 {
+  opacity: 0.71;
+  color: #d7794a;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.063rem;
+  margin: 0;
+}
+.popup {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  position: fixed;
+  top: 0;
+}
+.popup p {
+  text-align: left;
+  font-size: 2rem;
+  color: #000;
+}
+.popup .popup-content {
+  background-color: #fff;
+  width: 100rem;
+  margin: 2rem auto;
+  padding: 3rem;
+}
+.popup .popup-content button {
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  outline: none;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text-container {
+  height: 11.5rem;
+  overflow: hidden;
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 8px;
+  }
+  .navigation {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 6px;
+  }
+  .main {
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+    text-align: center;
+  }
+  .team {
+    padding-top: 10rem;
+  }
+  .team .text {
+    height: 30rem;
+    overflow: auto;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 586px) {
+  .popup-content {
+    max-width: 50rem;
+  }
+  html {
+    font-size: 5px;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 4px;
+  }
+}
