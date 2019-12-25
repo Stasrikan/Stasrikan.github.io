@@ -46,7 +46,7 @@
             numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
           </p>
         </div>
-        <div class="flex-container">
+        <div class="flex-container slider">
           <div class="human">
             <img src="img/Human.png" alt="Hugo Silva" />
             <h4>Hugo Silva</h4>
@@ -94,6 +94,58 @@
         </div>
       </div>
     </div>
+    <div class="stats">
+      <div class="container">
+        <div class="flex-container">
+          <div class="stat-block">
+            <h2>2500</h2>
+            <p>happy clients</p>
+          </div>
+          <div class="stat-block">
+            <h2>300</h2>
+            <p>FULL NOTEBOOKS</p>
+          </div>
+          <div class="stat-block">
+            <h2>120</h2>
+            <p>TEAMMATES</p>
+          </div>
+          <div class="stat-block">
+            <h2>30</h2>
+            <p>stores</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact">
+      <div class="container">
+        <h2>CONTACT US</h2>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+        accusantium doloremque laudantium, totam rem aperiam</p>
+        <form action="URL" class="contact-form">
+          <div class="flex-container">
+            <input type="text" class="input" placeholder="Name">
+            <select name="category" id="#category" class="input">
+              <option value="1">Category</option>
+              <option value="2">1</option>
+              <option value="3">2</option>
+            </select>
+            <input type="text" class="input" placeholder="Phone">
+            <select name="category" id="#category" class="input">
+              <option value="1">City</option>
+              <option value="2">1</option>
+              <option value="3">2</option>
+            </select>
+            <input type="text" class="input input-lg" placeholder="E-mail">
+            <textarea rows="5" placeholder="Message" class="input input-lg"></textarea>
+          </div>
+        </form>
+        <div class="btn-container">
+          <button class="contact-btn">Contact us</button>
+        </div>
+        
+      </div>
+      
+    </div>
     <!-- Всплывающие окна -->
     <div class="popup" id="popup1">
       <div class="popup-content">
@@ -114,7 +166,7 @@
     <script src="js/popup.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
-        $('.flex-container').slick({
+        $('.slider').slick({
           infinite: true,
           slidesToShow: 3,
           slidesToScroll: 1,

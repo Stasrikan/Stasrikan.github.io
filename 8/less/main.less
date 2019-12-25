@@ -125,7 +125,79 @@ body {
 .slick-active {
   outline: none;
 }
+//Блок статистики
+.stats {
+  background-color: @stats;
+  padding: 12rem 0;
+  text-align: center;
+  h2 {
+    color: #995437;
+    font-family: "Vani", sans-serif;
+    font-size: 7.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    margin-bottom: 3.7rem;
+  }
+  p {
+    color: #ffffff;
+    font-family: "Myriad Pro", sans-serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+}
+//Блок с контактами
+.contact {
+  background: url("../img/contact-bg.png") no-repeat;
+  background-size: cover;
+  padding-top: 30rem;
+  text-align: center;
+  h2 {
+    color: @light;
+    font-family: "Athelas", sans-serif;
+    font-size: 6.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
 
+    margin-bottom: 7rem;
+  }
+  p {
+    width: 40%;
+    color: #c0c0c0;
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    margin: 0 auto;
+  }
+}
+.contact-form {
+  margin-top: 12rem;
+}
+.btn-container {
+  width: 98%;
+  text-align: right;
+}
+.contact-btn {
+  color: @light;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+  border: 0.2rem solid #623621;
+  background-color: #89553b;
+  padding: 2.7rem 6.5rem;
+  margin-top: 6rem;
+  outline: none;
+  transition: all 0.2s ease;
+  &:hover {
+    background-color: lighten(#89553b, 5%);
+    cursor: pointer;
+    border-color: lighten(#623621, 5%);
+  }
+}
 //Цвета
 @nav: #8b8e8f;
 @light: #fff;
@@ -133,6 +205,7 @@ body {
 @dark: #000;
 @button: #7e9198;
 @main-bg: #babdbf;
+@stats: #1b2a31;
 //Миксины
 
 //Повторяющееся элементы
@@ -186,10 +259,40 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .text-container {
   height: 11.5rem;
   overflow: hidden;
+}
+.input {
+  background: none;
+  display: inline-block;
+  border: none;
+  border-bottom: 0.2rem solid #bfbfbf;
+  padding: 1.5rem 1rem;
+  outline: none;
+  color: #8e8e8e;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.04rem;
+  width: 45%;
+  margin-top: 7.5rem;
+  resize: none;
+}
+.input-lg {
+  width: 95%;
+}
+option {
+  background: none;
+  border: none;
+  outline: none;
+  color: #8e8e8e;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.04rem;
 }
 //Медиа запросы
 @media (max-width: 1200px) {
@@ -199,10 +302,21 @@ a {
   .navigation {
     display: none;
   }
+  .contact {
+    p {
+      width: 80%;
+    }
+  }
 }
 @media (max-width: 992px) {
   html {
     font-size: 7px;
+  }
+  .stat-block {
+    width: 50%;
+  }
+  .stat-block:nth-child(-n + 2) {
+    margin-bottom: 5rem;
   }
 }
 @media (max-width: 768px) {
@@ -221,6 +335,12 @@ a {
       overflow: auto;
       margin: 0 auto;
     }
+  }
+  .contact {
+    padding-top: 10rem;
+  }
+  .contact-form {
+    margin-top: 2rem;
   }
 }
 @media (max-width: 586px) {
