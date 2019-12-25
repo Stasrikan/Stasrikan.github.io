@@ -141,7 +141,7 @@ body {
 .contact {
   background: url("../img/contact-bg.png") no-repeat;
   background-size: cover;
-  padding-top: 30rem;
+  padding: 30rem 0 17rem 0;
   text-align: center;
 }
 .contact h2 {
