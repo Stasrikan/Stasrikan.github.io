@@ -4,10 +4,29 @@ html {
   font-size: 9px;
   width: 100%;
   height: auto;
+  -webkit-animation: move 1s forwards;
+  animation: move 1s forwards;
+}
+@-webkit-keyframes move {
+  from {
+    margin-right: 200rem;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+@keyframes move {
+  from {
+    margin-right: 200rem;
+  }
+  to {
+    margin-right: 0;
+  }
 }
 body {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .container {
@@ -25,11 +44,18 @@ body {
   background-color: @nav;
 }
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
   justify-content: left;
   a {
     padding: 3rem 2rem 3rem 2rem;
+    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
   }
   a:hover {
@@ -195,11 +221,161 @@ body {
   padding: 2.7rem 6.5rem;
   margin-top: 6rem;
   outline: none;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   &:hover {
     background-color: lighten(#89553b, 5%);
     cursor: pointer;
     border-color: lighten(#623621, 5%);
+  }
+}
+//Блок описание
+.about {
+  padding: 35.5rem 0;
+}
+.about-block {
+  background-color: #f9f9fb;
+  border: 0.2rem solid #d3d4d8;
+  text-align: center;
+  width: 40%;
+  padding: 7rem 0 3.5rem 0;
+  h2 {
+    color: #000;
+    font-family: "Athelas", sans-serif;
+    font-size: 4.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.24rem;
+    margin-bottom: 4rem;
+  }
+  p {
+    color: #3d3d3d;
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    width: 70%;
+    margin: 0 auto 6.5rem auto;
+  }
+}
+.about-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.item {
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+  button {
+    padding: 1rem 3.5rem;
+    border: 0.1rem solid black;
+    outline: none;
+    transition: 0.2s ease;
+    position: relative;
+    &:hover {
+      background: @dark;
+      color: @light;
+      cursor: pointer;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.2rem;
+      height: 5rem;
+      background-color: black;
+      top: -5rem;
+      left: 50%;
+      z-index: -1;
+      transform: translateX(-50%);
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
+//Блок перед футером
+.prefooter {
+  background-color: #172830;
+  padding: 5rem 0;
+  &-item {
+    display: inline-block;
+    text-align: left;
+    height: 100%;
+    vertical-align: top;
+    h4 {
+      color: #d2d3d7;
+      font-family: "Myriad Pro", sans-serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.06rem;
+    }
+    a {
+      display: block;
+      text-align: left;
+      color: #d2d3d7;
+      font-family: "Myriad Pro", sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.06rem;
+      margin-bottom: 1.8rem;
+      outline: none;
+      transition: color 0.2s ease;
+      &:hover {
+        color: black;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 20rem;
+    }
+    p {
+      display: inline;
+      vertical-align: middle;
+      color: @light;
+      font-family: "Myriad Pro", sans-serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 2.4rem;
+      /* Text style for "3-6000-000" */
+      letter-spacing: 0.04rem;
+      margin-left: 2rem;
+      text-align: left;
+    }
+  }
+  .wrap {
+    display: flex;
+    align-items: center;
+  }
+}
+//footer
+.footer {
+  background-color: @dark;
+  padding: 3.5rem;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  p {
+    color: #cdcbcb;
+    font-family: "Myriad Pro", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    letter-spacing: 0.06rem;
+    margin: 0;
+  }
+  &-wrap {
+    display: flex;
+    align-items: center;
+    img {
+      width: 4rem;
+      height: auto;
+    }
   }
 }
 //Цвета
@@ -260,9 +436,15 @@ a {
   outline: none;
 }
 .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .text-container {
@@ -299,6 +481,22 @@ option {
   letter-spacing: 0.04rem;
 }
 //Медиа запросы
+@media (max-width: 1800px) {
+  .about {
+    padding: 10rem 0;
+    .img-block {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .about-flex {
+    display: block;
+  }
+  .about-block {
+    margin-top: 5rem;
+    width: 100%;
+  }
+}
 @media (max-width: 1200px) {
   html {
     font-size: 8px;
