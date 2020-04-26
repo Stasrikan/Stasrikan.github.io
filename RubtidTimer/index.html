@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubtid Timer</title>
+    <link rel="stylesheet" href="files/css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>Rubtid Timer</h1>
+        </div>
+    </header>
+    <main class="main">
+        <div class="stopwatch-container">
+            <div class="stopwatch">
+                <span class="time" id="time">
+                    0:0
+                </span>
+            </div>
+            <div class="controls">
+                <button onclick="stopClick()" id="stop"><img class="stop-icon" src="files/imgs/stop.svg" alt="Stop"></button>
+                <button id="pause" onclick="pauseClick()" class="pause-btn">&#10148;</button>
+            </div>
+        </div>
+    </main>
+    <footer id="footer" class="footer">
+        <h2 id="stopwatch-btn" onclick="SliderButtonClick('stopwatch-btn')" class="active slider-button">Stopwatch</h2>
+        <h2 id="timer-btn" onclick="SliderButtonClick('timer-btn')" class="slider-button">Timer</h2>
+    </footer>
+    </div>
+    <script src="files/js/timer.js"></script>
+</body>
+
+</html>

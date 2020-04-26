@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1100px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.slider-button {
+    transition: 0.3s all ease;
+}
+
+.slider-button:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.stopwatch-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    padding: 20px 0;
+    color: #f23d3d;
+    background: #1f1f1f;
+    height: 5vh;
+}
+
+.main {
+    background: #242323;
+    color: white;
+    height: 81.5vh;
+}
+
+.stopwatch {
+    border: 10px solid #f23d3d;
+    border-radius: 100000px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    color: #fff;
+    align-items: center;
+}
+
+.pause-btn {
+    color: #fff;
+    background: none;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f23d3d;
+    border-radius: 100px;
+    transition: 0.3s all ease;
+}
+
+.pause-btn:hover {
+    background: #fff;
+    border-color: #fff;
+    color: black;
+}
+
+#stop {
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: none;
+    margin-right: 20px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #1f1f1f;
+    padding: 20px 0;
+    color: #f23d3d;
+    height: 5vh;
+}
+
+@media(max-width:992px) {
+    .stopwatch {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media(max-width:576px) {
+    .stopwatch {
+        width: 300px;
+        height: 300px;
+        font-size: 100px;
+    }
+    .pause-btn {
+        width: 40px;
+        height: 40px;
+    }
+    #stop {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media(max-width:400px) {
+    .stopwatch {
+        width: 250px;
+        height: 250px;
+        font-size: 75px;
+    }
+}
