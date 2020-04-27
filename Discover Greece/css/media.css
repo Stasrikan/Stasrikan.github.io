@@ -1,0 +1,50 @@
+@media (max-width:992px) {
+    .nav {
+        display: none;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .container {
+        max-width: 920px;
+    }
+    .form-button {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:810px) {
+    .reserve-form {
+        flex-direction: column;
+    }
+    .input-wrapper {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .reserve-input {
+        width: 100%;
+    }
+}
+
+@media(max-width:576px) {
+    .main-inner {
+        align-items: center;
+        text-align: center;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h1 {
+        font-size: 60px;
+    }
+}
+
+@media(max-height:500px) {
+    .main {
+        height: 110vh;
+    }
+}
